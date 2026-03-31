@@ -1,5 +1,5 @@
 name: Homebridge
-version: 0.2.2
+version: 2.0.0
 stage: experimental
 slug: homebridge
 description: Lightweight HomeKit API implementation with plugin support
@@ -8,6 +8,7 @@ arch:
   - armv7
   - aarch64
   - amd64
+  - i386
 ports:
   8581/tcp: 8581
 ports_description:
