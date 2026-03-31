@@ -1,5 +1,5 @@
 name: "Homebridge Test-Instanz"
-version: "2.1.8"
+version: "2.1.9"
 slug: "homebridge_test"
 description: "Zweite Homebridge Instanz auf Port 8582"
 url: "https://github.com/GodOfGodless/hassio-addons"
