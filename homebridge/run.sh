@@ -1,7 +1,7 @@
 #!/usr/bin/with-contenv bashio
 
 # Pfad definieren
-CONFIG_PATH="/config/homebridge_test"
+CONFIG_PATH="/homeassistant/homebridge_test"
 
 # Falls der Ordner noch nicht existiert, erstelle ihn
 if [ ! -d "$CONFIG_PATH" ]; then
