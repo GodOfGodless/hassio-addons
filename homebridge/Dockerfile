@@ -11,7 +11,8 @@ RUN apk add --no-cache \
     python3 \
     make \
     g++ \
-    git
+    git \
+    sudo
 
 # Erstelle festen Installationsordner
 WORKDIR /opt/homebridge
