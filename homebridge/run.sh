@@ -1,9 +1,8 @@
 #!/usr/bin/with-contenv bashio
 
-# Verzeichnis für die Config erstellen, falls nicht vorhanden
-mkdir -p /config/homebridge
+# Eigenes Verzeichnis für die Test-Instanz erstellen
+mkdir -p /config/homebridge_test
 
-# Startet Homebridge mit dem Web-Interface (UI-X)
-# Der Pfad /config/homebridge sorgt dafür, dass deine Einstellungen 
-# ein Backup von Home Assistant überstehen.
-homebridge-config-ui-x -U /config/homebridge
+# Startet Homebridge auf Port 8582 im neuen Verzeichnis
+# -P 8582 erzwingt das UI auf diesen Port
+homebridge-config-ui-x -U /config/homebridge_test -P 8582
