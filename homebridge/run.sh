@@ -1,21 +1,22 @@
 #!/usr/bin/with-contenv bashio
 set -e
 
-# Pfad für deine Konfiguration (Test-Instanz)
+# Pfad für deine Konfiguration
 CONFIG_PATH="/homeassistant/homebridge_test"
 mkdir -p "$CONFIG_PATH"
 
-# Der Pfad zu unserer lokalen Installation
-BINARY="/opt/homebridge/node_modules/.bin/homebridge-config-ui-x"
+# Der Pfad, den wir gerade im Log gesehen haben
+BINARY="/opt/homebridge/node_modules/.bin/hb-service"
 
 echo "--- STARTVORGANG ---"
 if [ -f "$BINARY" ]; then
-    echo "Homebridge UI gefunden! Starte auf Port 8582..."
-    # Starte das Programm
-    exec "$BINARY" -U "$CONFIG_PATH" -P 8582
+    echo "hb-service gefunden! Starte Homebridge UI auf Port 8582..."
+    
+    # 'hb-service run' startet Homebridge inklusive Web-Interface
+    # -U gibt das Konfigurationsverzeichnis an
+    # -P gibt den Port für das Web-Interface an
+    exec "$BINARY" run -U "$CONFIG_PATH" -P 8582
 else
-    echo "FEHLER: Programm nicht gefunden in $BINARY"
-    echo "Inhalt von /opt/homebridge/node_modules/.bin/:"
-    ls -la /opt/homebridge/node_modules/.bin/ || echo "Ordner existiert nicht"
+    echo "FEHLER: hb-service nicht gefunden in $BINARY"
     exit 1
 fi
