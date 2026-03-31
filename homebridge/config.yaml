@@ -1,7 +1,7 @@
-name: "Homebridge (Mein Fork)"
-version: "2.0.0"
-slug: "homebridge"
-description: "Lightweight HomeKit API implementation with plugin support"
+name: "Homebridge Test-Instanz"
+version: "2.1.0"
+slug: "homebridge_test"
+description: "Zweite Homebridge Instanz auf Port 8582"
 url: "https://github.com/GodOfGodless/hassio-addons"
 arch:
   - armv7
@@ -9,10 +9,10 @@ arch:
   - amd64
   - i386
 ports:
-  8581/tcp: 8581
+  8582/tcp: 8582
 ports_description:
-  8581/tcp: "Homebridge UI"
-webui: "http://[HOST]:[PORT:8581]"
+  8582/tcp: "Homebridge Test-UI"
+webui: "http://[HOST]:[PORT:8582]"
 host_network: true
 init: false
 map:
