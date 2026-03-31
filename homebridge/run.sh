@@ -31,4 +31,4 @@ fi
 
 # Starte Homebridge UI auf Port 8582
 echo "Starte Homebridge auf Port 8582..."
-homebridge-config-ui-x -U "$CONFIG_PATH" -P 8582
+/usr/bin/homebridge-config-ui-x -U "$CONFIG_PATH" -P 8582
