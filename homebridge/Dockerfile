@@ -13,11 +13,11 @@ RUN apk add --no-cache \
     g++ \
     git
 
-# Homebridge global installieren
-RUN npm install -g --unsafe-perm homebridge homebridge-config-ui-x
+# Erstelle festen Installationsordner
+WORKDIR /opt/homebridge
 
-# Sicherstellen, dass die globalen npm-Binaries im Pfad sind
-ENV PATH="${PATH}:/usr/local/bin"
+# Installation direkt in diesen Ordner (nicht global)
+RUN npm install homebridge homebridge-config-ui-x
 
 # Kopiere Start-Skript
 COPY run.sh /
