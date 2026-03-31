@@ -1,9 +1,8 @@
-name: Homebridge
-version: 2.0.0
-stage: experimental
-slug: homebridge
-description: Lightweight HomeKit API implementation with plugin support
-url: https://github.com/isteve-o/hassio-addons/tree/main/homebridge
+name: "Homebridge (Mein Fork)"
+version: "2.0.0"
+slug: "homebridge"
+description: "Lightweight HomeKit API implementation with plugin support"
+url: "https://github.com/GodOfGodless/hassio-addons"
 arch:
   - armv7
   - aarch64
@@ -12,10 +11,11 @@ arch:
 ports:
   8581/tcp: 8581
 ports_description:
-  8581/tcp: Homebridge UI
-webui: http://[HOST]:[PORT:8581]
+  8581/tcp: "Homebridge UI"
+webui: "http://[HOST]:[PORT:8581]"
 host_network: true
 init: false
 map:
   - addon_config:rw
-image: isteveo/{arch}-addon-homebridge
+options: {}
+schema: {}
