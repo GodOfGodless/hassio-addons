@@ -12,6 +12,7 @@ This is a personal repository for [Home Assistant](https://www.home-assistant.io
 ## Add-ons
 
 * [Homebridge](homebridge/): Lightweight HomeKit API implementation with plugin support
+* updated 01.April 2026
 
 ## License
 
