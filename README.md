@@ -1,4 +1,4 @@
-# iSteve-O's Home Assistant Add-Ons
+# Home Assistant Add-Ons
 
 This is a personal repository for [Home Assistant](https://www.home-assistant.io) add-ons.
 
